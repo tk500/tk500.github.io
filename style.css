@@ -171,22 +171,22 @@ header{
   background: rgba(255,255,255,0.15);
  }
  .work_desc_out {
-  background: url(img/ecsite-mikan_1.png);
+  background: url(img/img_reverse/ecsite-mikan_1.png);
   background-size: cover;
   height: 50%;
  }
  .work_desc_out_1 {
-  background: url(img/flower2_1.png);
+  background: url(img/img_reverse/flower2_1.png);
   background-size: cover;
   height: 50%;
  }
  .work_desc_out_2 {
-  background: url(img/flower3_1.png);
+  background: url(img/img_reverse/flower3_1.png);
   background-size: cover;
   height: 50%;
  }
  .work_desc_out_3 {
-  background: url(img/flower4_1.png);
+  background: url(img/img_reverse/flower4_1.png);
   background-size: cover;
   height: 50%;
  }
