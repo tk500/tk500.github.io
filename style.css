@@ -70,7 +70,7 @@ body {
    animation-duration: 5s;
  }
  .cover {
-  background: url(posterimage.png);
+  background: url(img/posterimage.png);
   background-size: cover;
   height: 1020px;
   width: 100%;
@@ -178,22 +178,22 @@ body {
   background: rgba(255,255,255,0.15);
  }
  .work_desc_out {
-  background: url(ecsite-mikan_1.png);
+  background: url(img/img_reverse/ecsite-mikan_1.png);
   background-size: cover;
   height: 50%;
  }
  .work_desc_out_1 {
-  background: url(flower2_1.png);
+  background: url(img/img_reverse/flower2_1.png);
   background-size: cover;
   height: 50%;
  }
  .work_desc_out_2 {
-  background: url(flower3_1.png);
+  background: url(img/img_reverse/flower3_1.png);
   background-size: cover;
   height: 50%;
  }
  .work_desc_out_3 {
-  background: url(flower4_1.png);
+  background: url(img/img_reverse/flower4_1.png);
   background-size: cover;
   height: 50%;
  }
@@ -248,7 +248,7 @@ body {
   font-family: "Font Awesome 5 Free";
  }
  .ection_bg {
-  background: url(stars.jpg);
+  background: url(img/stars.jpg);
   background-size: cover;
   height: 750px;
   width: 100%;
