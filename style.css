@@ -95,6 +95,7 @@ body {
   background: #fff;;
   height: 3px;
   width: 75px;
+  cursor: pointer;
  }
  .button::before {
   content: '';
