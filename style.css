@@ -251,6 +251,10 @@ li {
   background: rgba(255, 255, 255, 0.15);
 }
 
+.wrappar_work {
+  margin: 0 0;
+}
+
 .work_desc_out {
   background: url(img/img_reverse/ecsite-mikan_1.png);
   background-size: cover;
