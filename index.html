@@ -63,12 +63,52 @@
     </div>
   </div>
   <main>
-    <section class="about container-sm text-center">
-      <div class="wrappar">
+    <section class="about">
+      <div class="wrappar  container-sm text-center">
         <h2 class="heading">ABOUT ME</h2>
         <p>神奈川県在住 28歳のフロントエンドエンジニア（志望）。<br>独学でHTML/CSS/javascriptコーディング、Webデザインを学んでおります。</p>
         <p>これからは、保守性に優れたコーディングや、<br>バックエンド側のスキルも身につけるようになりたいと思います。</p>
-        <a class="read_more  py-5" href="https://tk500.github.io/about/.">Read More</a>
+        <button id="hide_bottom" class="read_more type="button">Read More</button>
+
+      <div id="hide" class="about_main_contents">
+        <h2 class="page_title">About</h2>
+        <div class="about_main">
+          <div class="about_main_bg">
+            <div class="about_cover"></div>
+            <h2 class="about_main_title">当サイトについて</h2>
+            <div class="about_main_text">
+              <p>
+                動的に見せる事を取り入れたかった為、CSSとJavaScriptを使いをドローイン、アウトデザインやスライドショー実装しました。
+              </p>
+              <p>
+                また、違うデバイスにした時デザインが崩れないよう、レスポンシブデザインも意識し作成しておりいます。
+              </p>
+              <p>
+                SEO対策としまして、読み込みを速くする為、ハンバーガーメニューのアイコンをCSSでデザインしました。
+                他にもボタンなど、画像を使わなくてもいいデザインはCSSで作りました。
+              </p>
+              <p>
+                メンテナンス性に関しまして、不要なクラス名をつけず、命名は最低限にとどめる。
+                HTMLは要素ごとにインデントする、と言ったポイントを意識しました。
+              </p>
+            </div>
+          </div>
+          <div class="about_container_out container">
+          <div class="about_container_in row">
+            <img class="col-6" src="img/about_img/ohana.jpg">
+            <div class="myName col-6 text-center">
+              <p class="nameJP">細川　拓也</p>
+              <p class="nameEN">Hosokawa Takuya</p>
+            </div>
+            <p class="aout_text col-12 text-center">
+              28歳、神奈川県在住、フロントエンジニア志望で勉強をしています。
+            </p>
+            <p class="aout_text col-12 text-center">
+              現在は、Web関連の書籍を読んだり、 コーディングをしたりしながら、スキルアップを目指しています。
+            </p>
+          </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="works container-fluid text-center">
@@ -117,24 +157,28 @@
         <a class="read_more py-5 col-12" href="https://tk500.github.io/works/.">Read More</a>
       </div>
     </section>
-    <section class="skills container text-center">
-      <h2 class="heading">SKILLS</h2>
-      <div class="wrappar row text-center">
-        <div class="skill_box d-flex flex-column col-xs-12 col-sm-4">
-          <h3 class="skill_title">CODING</h3>
-          <p>HTML/CSSでレスポンシブサイトのコーディングができます。</p>
+    <section class="skills">
+      <div class="wrappar container text-center">
+        <h2 class="heading">SKILLS</h2>
+        <div class="row text-center">
+          <div class="skill_box d-flex flex-column col-xs-12 col-sm-4">
+            <h3 class="skill_title">CODING</h3>
+            <p>HTML/CSSでレスポンシブサイトのコーディングができます。</p>
+          </div>
+          <div class="skill_box d-flex flex-column col-xs-12 col-sm-4">
+            <h3 class="skill_title">〇〇〇〇〇</h3>
+            <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+          </div>
+          <div class="skill_box d-flex flex-column col-xs-12 col-sm-4">
+            <h3 class="skill_title">〇〇〇〇〇</h3>
+            <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+          </div>
+          <a class="read_more  py-5 col-12" href="https://tk500.github.io/skills/.">Read More</a>
         </div>
-        <div class="skill_box d-flex flex-column col-xs-12 col-sm-4">
-          <h3 class="skill_title">〇〇〇〇〇</h3>
-          <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
-        </div>
-        <div class="skill_box d-flex flex-column col-xs-12 col-sm-4">
-          <h3 class="skill_title">〇〇〇〇〇</h3>
-          <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
-        </div>
-        <a class="read_more  py-5 col-12" href="https://tk500.github.io/skills/.">Read More</a>
       </div>
     </section>
+  </main>
+  <footer class="text-center text-mutec">
     <section class="contac text-center">
       <div class="ection_bg">
         <h2 class="haeding">CONTACT</h2>
@@ -143,23 +187,24 @@
           <textarea class="inpput_txet" name="message" placeholder="Message"></textarea>
           <button type="button" class="btn">SEND</button>
         </form>
-        <footer class="text-center text-mutec">
+        <p class="copyright">
           copyright yyyymm.com
-        </footer>
+        </p>
       </div>
     </section>
-  </main>
+  </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-    crossorigin="anonymous"></script>
+  integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+  crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-    crossorigin="anonymous"></script>
+  integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+  crossorigin="anonymous"></script>
+  <script src="min.js"></script>
 </body>
 
 </html>
