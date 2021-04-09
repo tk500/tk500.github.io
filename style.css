@@ -192,18 +192,6 @@ p, h1, h2, h3, li {
   transition: left 0.6s;
 }
 
-.link4 {
-  transition: left 0.8s;
-}
-
-.link5 {
-  transition: left 1s;
-}
-
-.link6 {
-  transition: left 1.2s;
-}
-
 li {
   list-style-type: none;
   padding: 25px 25px;
