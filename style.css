@@ -226,6 +226,7 @@ li {
  }
  .about_cover {
   background: url(img/about_img/about_bg.jpg);
+  background-repeat: no-repeat;
   background-size: 100% auto;
   height: 100%;
   margin-left: 30%;
