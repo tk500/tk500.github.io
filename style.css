@@ -1,45 +1,472 @@
-var head = document.getElementsByTagName('head')
-var script = document.createElement('script')
-//ここで任意のjQueryを読み込ませる
-script.setAttribute('src', 'https://code.jquery.com/jquery-3.2.1.min.js')
-script.setAttribute('type', 'text/javascript')
-script.addEventListener('load', function () {
+body {
+  min-width: 800px;
+}
 
-  // ここにjQueryの記述をする
-  // $(function () {
-  //   console.log('test')
-  // })
-  $(document).ready(function(){
-    $("#hide_bottom").click(function(){
-    $("#hide").fadeToggle(1000);
-    });
-  });
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  $(document).ready(function(){
-    $("#hide_skills").click(function(){
-    $("#skills_hide").fadeToggle(1000);
-    });
-  });
+.logo {
+  line-height: 1;
+}
 
-  $('#hide_bottom, #hide_skills').on('click',function(){
-    // クリックされたら次の要素を操作
-    $(this).next().slideToggle();
-    $(this).next().toggleClass('active');
-    $(this).toggleClass('active');
-   });
+.top_main {
+  background-color: rgb(65, 62, 62);
+}
 
-  //  ヘッダーメニューの開閉
-   $(document).ready(function(){
-     $("#click_s").click(function(){
-     $("#menu").slideToggle(1000);
-     });
-   });
-  //  ヘッダーメニュー選択時に閉じる
-   $('#click, #click2, #click3').on('click',function(){
-     $("#menu").fadeOut(1000);
-    });
-    
+.text {
+  padding: 0 100px;
+  position: absolute;
+  top: 500px;
+}
 
-})
+.menu a {
+  color: #fff;
+}
 
-document.head.appendChild(script)
+@keyframes line {
+  from {
+    left: -100%;
+    border-bottom: 3px solid #fff;
+    position: fixed;
+    top: 350px;
+    opacity: 1;
+  }
+  to {
+    left: 0;
+    border-bottom: 3px solid #fff;
+    position: fixed;
+    top: 350px;
+    opacity: 0;
+  }
+}
+
+.line {
+  position: fixed;
+  width: 150%;
+  animation-name: line;
+  animation-duration: 5s;
+  z-index: 10000;
+}
+
+@keyframes frame {
+  from {
+    background-color: #070707;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    z-index: 1000;
+  }
+  to {
+    position: absolute;
+    opacity: 1;
+    z-index: 0;
+  }
+}
+
+.first_cover {
+  position: relative;
+  width: 100%;
+  animation-name: frame;
+  animation-duration: 5s;
+}
+
+.cover {
+  background: url(img/posterimage.png);
+  background-size: cover;
+  height: 1020px;
+  width: 100%;
+  opacity: 0.4;
+}
+
+p, h1, h2, h3, li {
+  font-family: "Noto Serif SC", serif;
+  font-weight: normal;
+}
+
+.name {
+  font-size: 40px;
+}
+
+.desc {
+  font-size: 20px;
+}
+
+.switch {
+  position: fixed;
+  width: 75px;
+  height: 50px;
+  top: 8%;
+  right: 10%;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+  position: fixed;
+  top: 8%;
+  right: 10%;
+  z-index: 100;
+  background: #fff;
+  height: 3px;
+  width: 75px;
+}
+
+.button::before {
+  content: '';
+  background: #fff;
+  ;
+  height: 3px;
+  width: 50px;
+  display: inline-block;
+  z-index: 100;
+}
+
+.button::after {
+  content: '';
+  background: #fff;
+  ;
+  height: 3px;
+  width: 25px;
+  display: inline-block;
+  z-index: 100;
+  position: absolute;
+  top: 31px;
+  left: 0px;
+}
+
+.menu.active {
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #070707;
+  color: #fff;
+  transition: left 0.7s, opacity 0.7s;
+  left: 15px;
+}
+
+.menu>li {
+  border-bottom: 1px solid #fff;
+  left: -100%;
+  position: relative;
+  opacity: 0.5;
+}
+
+.container-fluid {
+  padding: 100px 100px 0;
+}
+
+
+#menu-checkbox:checked+label+.menu {
+  opacity: 1;
+}
+
+/* CSSスライドメニュー */
+#menu-checkbox, .menu {
+  display: none;
+}
+/* #menu-checkbox:checked+label+.menu>li {
+  left: 0;
+} */
+
+.header_parent{
+   margin-top: 10%;
+}
+
+.link1 {
+  transition: left 0.2s;
+}
+
+.link2{
+  transition: left 0.4s;
+}
+
+.link3 {
+  transition: left 0.6s;
+}
+
+li {
+  list-style-type: none;
+  padding: 25px 25px;
+  opacity: 0.5;
+}
+
+.nav_aside {
+  opacity: 0.5;
+}
+
+.heading {
+  margin: 30px 0 15px;
+}
+
+.about, .skills {
+  background: #ced4da;
+}
+
+/* main_about CSS */
+.about_main_contents {
+  display: none;
+}
+
+.about_main_contents{
+  padding-top: 3%;
+  border-top: 1px solid #383634;
+ }
+ 
+ .about_main_bg {
+   position: relative;
+ }
+ .about_cover {
+  background: url(img/about_img/about_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 100%;
+  margin-left: 30%;
+  width: 70%;
+  opacity: 0.4;
+  position: absolute;
+  }
+  .about_container_out {
+    margin-top: 3%;
+  }
+  .about_main_title {
+    padding-left: 10%;
+    margin-bottom: 5%;
+  }
+ .about_main_text {
+  position: relative;
+  padding-right: 50%;
+  padding-left: 10%;
+  z-index: 0;
+ }
+ .aout_text{
+   margin-top: 3%;
+ }
+ .myName {
+   padding-top: 3%;
+ }
+ .nameJP {
+    font-size: 2rem;
+ }
+ .nameEN {
+    font-size: 1rem;
+  }
+.read_more {
+    cursor: pointer;
+  }
+#hide_bottom {
+    background: #ced4da;
+    border: none;
+}
+/* ここまで */
+
+.wrappar {
+  padding: 80px 30px;
+}
+
+.works .read_more {
+  color: #fff;
+}
+
+
+
+.works {
+  color: #fff;
+  background: #383634;
+  padding: 80px 0;
+  z-index: 0;
+}
+
+.work_box {
+  padding: 0;
+  left: -16px;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.15);
+  padding-bottom: 10px;
+}
+
+.wrappar_work {
+  margin: 0 0;
+}
+
+.work_desc_out {
+  background: url(img/img_reverse/bottom_icon/top_mikan_revers.png);
+  background-size: cover;
+  height: 50%;
+}
+
+.work_desc_out_1 {
+  background: url(img/img_reverse/flower2_1.png);
+  background-size: cover;
+  height: 50%;
+}
+
+.work_desc_out_2 {
+  background: url(img/img_reverse/flower3_1.png);
+  background-size: cover;
+  height: 50%;
+}
+
+.work_desc_out_3 {
+  background: url(img/img_reverse/flower4_1.png);
+  background-size: cover;
+  height: 50%;
+}
+
+.work_desc_inner {
+  background: rgba(45, 45, 45, 0.75);
+  height: 100%;
+}
+
+.work_desc {
+  padding: 20px;
+  margin: 0;
+}
+
+.img {
+  height: 50%;
+}
+
+.skill_title::before {
+  font-family: "Font Awesome 5 Free";
+  display: block;
+  color: #f2003d;
+  font-weight: 900;
+  font-size: 6rem;
+  font-size: 60px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px;
+  border: solid 4px #f2003d;
+  border-radius: 50%;
+  line-height: 92px;
+}
+
+.skill_box:nth-of-type(1) .skill_title::before {
+  content: '\f121';
+}
+
+.skill_box:nth-of-type(2) .skill_title::before {
+  content: '\f201';
+}
+
+.skill_box:nth-of-type(3) .skill_title::before {
+  content: '\f108';
+}
+
+.wrappar .read_more {
+  color: #d03c56;
+}
+
+.wrappar .read_more::after {
+  color: #d03c56;
+  margin-left: 5px;
+  content: '\f054';
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+.wrappar .read_more.active::after {
+  color: #d03c56;
+  margin-left: 5px;
+  content: '\f107';
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+
+
+
+.ection_bg {
+  background: url(img/stars.jpg);
+  background-size: cover;
+  height: 750px;
+  width: 100%;
+  padding: 80px 0;
+  color: #fff;
+  opacity: 0.8;
+  display: inline-block;
+}
+
+/* skills */
+
+.main_contents{
+  height: 100%;
+  display: none;
+  border-top: 1px solid black;
+ }
+ .page_title {
+   margin-top: 10%;
+  padding-left: 20%;
+ }
+ .container_bg {
+  background: transparent url(img/bg_webdesign.png) no-repeat center bottom;
+  height: 550px;
+ }
+ .container_bg1 {
+  background: transparent url(img/bg_webmarketing.png) no-repeat center bottom;
+  height: 550px;
+ }
+
+ .skills_item_header {
+  padding: 50px;
+ }
+ .skills_item {
+  width: 50%;
+  margin-right: 50%;
+  padding: 0 15px;
+ }
+ .skills_item1 {
+  width: 50%;
+  margin-left: 50%;
+  padding: 0 15px;
+ }
+ .skills_icon {
+  margin-left: 8.33%;
+  padding: 0 15px;
+ }
+ .icon {
+  height: 40px;
+  float: left;
+  padding-right: 35px;
+ }
+ .skills_text {
+  margin-left: 160px;
+ }
+
+.inpput_txet {
+  height: 300px;
+}
+
+.inpput_name, .inpput_txet {
+  margin: 0 auto;
+  display: block;
+  width: 50%;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border: solid 1px rgba(255, 255, 255, 0.4);
+}
+
+.contact_form .btn {
+  color: #f8f9fa;
+  border: solid 1px rgba(255, 255, 255, 0.4);
+  width: 200px;
+}
+.contac {
+  position: relative;
+}
+.copyright {
+  position: absolute;
+  bottom: 0%;
+  padding-left: 45%;
+}
