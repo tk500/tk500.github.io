@@ -35,7 +35,7 @@ script.addEventListener('load', function () {
      });
    });
   //  ヘッダーメニュー選択時に閉じる
-   $('#click, #click2, click3').on('click',function(){
+   $('#click, #click2, #click3').on('click',function(){
      $("#menu").fadeOut(1000);
     });
     
