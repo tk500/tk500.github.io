@@ -143,7 +143,7 @@ p, h1, h2, h3, li {
   left: 0px;
 }
 
-.menu {
+.menu.active {
   position: fixed;
   box-sizing: border-box;
   top: 0;
@@ -151,9 +151,8 @@ p, h1, h2, h3, li {
   height: 100%;
   background: #070707;
   color: #fff;
-  left: -100%;
-  right: 0px;
   transition: left 0.7s, opacity 0.7s;
+  left: 15px;
 }
 
 .menu>li {
@@ -167,24 +166,28 @@ p, h1, h2, h3, li {
   padding: 100px 100px 0;
 }
 
-#menu-checkbox {
-  display: none;
-}
 
 #menu-checkbox:checked+label+.menu {
-  left: 15px;
   opacity: 1;
 }
 
-#menu-checkbox:checked+label+.menu>li {
+/* CSSスライドメニュー */
+#menu-checkbox, .menu {
+  display: none;
+}
+/* #menu-checkbox:checked+label+.menu>li {
   left: 0;
+} */
+
+.header_parent{
+   margin-top: 10%;
 }
 
 .link1 {
   transition: left 0.2s;
 }
 
-.link2 {
+.link2{
   transition: left 0.4s;
 }
 
@@ -216,7 +219,6 @@ li {
 }
 
 .about_main_contents{
-  margin-top: 10%;
   padding-top: 3%;
   border-top: 1px solid #383634;
  }
@@ -276,13 +278,7 @@ li {
   color: #fff;
 }
 
-.works .read_more::after {
-  color: #fff;
-  margin-left: 5px;
-  content: '\f054';
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-}
+
 
 .works {
   color: #fff;
@@ -297,8 +293,8 @@ li {
 }
 
 .btn {
-  margin-top: 20px;
   background: rgba(255, 255, 255, 0.15);
+  padding-bottom: 10px;
 }
 
 .wrappar_work {
@@ -381,6 +377,15 @@ li {
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
 }
+.wrappar .read_more.active::after {
+  color: #d03c56;
+  margin-left: 5px;
+  content: '\f107';
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+
+
 
 .ection_bg {
   background: url(img/stars.jpg);
@@ -392,6 +397,52 @@ li {
   opacity: 0.8;
   display: inline-block;
 }
+
+/* skills */
+
+.main_contents{
+  height: 100%;
+  display: none;
+  border-top: 1px solid black;
+ }
+ .page_title {
+   margin-top: 10%;
+  padding-left: 20%;
+ }
+ .container_bg {
+  background: transparent url(img/bg_webdesign.png) no-repeat center bottom;
+  height: 550px;
+ }
+ .container_bg1 {
+  background: transparent url(img/bg_webmarketing.png) no-repeat center bottom;
+  height: 550px;
+ }
+
+ .skills_item_header {
+  padding: 50px;
+ }
+ .skills_item {
+  width: 50%;
+  margin-right: 50%;
+  padding: 0 15px;
+ }
+ .skills_item1 {
+  width: 50%;
+  margin-left: 50%;
+  padding: 0 15px;
+ }
+ .skills_icon {
+  margin-left: 8.33%;
+  padding: 0 15px;
+ }
+ .icon {
+  height: 40px;
+  float: left;
+  padding-right: 35px;
+ }
+ .skills_text {
+  margin-left: 160px;
+ }
 
 .inpput_txet {
   height: 300px;
