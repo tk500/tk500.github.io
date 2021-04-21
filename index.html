@@ -25,26 +25,29 @@
         </h1>
         <input type="checkbox" id="menu-checkbox">
         <label for="menu-checkbox">
-          <div class="switch">
+          <div id="click_s" class="switch">
             <div class="button"></div>
           </div>
         </label>
-        <nav class="menu row">
-          <ul class=" col-8 d-flex flex-column align-items-center justify-content-center display-4">
+        <nav id="menu" class="menu active row">
+          <ul  class="header_parent col-8 d-flex flex-column align-items-center justify-content-center display-4">
             <li class="link1">
               <a href="https://tk500.github.io">Home</a>
             </li>
             <li class="link2">
-              <a href="https://tk500.github.io/works/.">Works</a>
+              <a id="click" href="#about">About</a>
             </li>
             <li class="link3">
-              <a href="https://tk500.github.io/skills/.">Skills</a>
+              <a id="click2" href="#works">Works</a>
+            </li>
+            <li class="link4">
+              <a  id="click3" href="#skills">Skills</a>
             </li>
           </ul>
-          <div class="nav_aside d-flex align-items-center col-4">
+          <div class="nav_aside text-right col-8">
             <h2>portfolio.</h2>
           </div>
-          </navi>
+          </nav>
       </div>
     </div>
   </header>
@@ -57,7 +60,7 @@
     </div>
   </div>
   <main>
-    <section class="about">
+    <section id="about" class="about">
       <div class="wrappar  container-sm text-center">
         <h2 class="heading">ABOUT ME</h2>
         <p>
@@ -123,15 +126,15 @@
         </div>
       </div>
     </section>
-    <section class="works container-fluid text-center">
+    <section id="works" class="works container-fluid text-center">
       <h2 class="heading ">WORKS</h2>
       <div class="wrappar_work row">
         <div class="work_box work d-flex flex-column col-xs-12 col-sm-3">
           <div class="work_desc_out">
             <div class="work_desc_inner">
               <p class=" work_desc ">【ECサイト】
-                <a class="btn btn-secondary" href="https://tk500.github.io/ECsite/">Read More</a>
               </p>
+              <a class="btn btn-secondary" href="https://tk500.github.io/ECsite/">Read More</a>
             </div>
           </div>
           <img class="img d-none d-sm-block" src="img/img_reverse/top_mikan.png">
@@ -168,7 +171,7 @@
         <!-- <a class="read_more py-5 col-12" href="https://tk500.github.io/works/.">Read More</a> -->
       </div>
     </section>
-    <section class="skills">
+    <section id="skills" class="skills">
       <div class="wrappar container text-center">
         <h2 class="heading">SKILLS</h2>
         <div class="row text-center">
@@ -184,9 +187,85 @@
             <h3 class="skill_title">PHOTOSHOP</h3>
             <p>デザインカンプ作成</p>
           </div>
-          <a class="read_more  py-5 col-12" href="https://tk500.github.io/skills/.">Read More</a>
+          <a href="#skills_hide" id="hide_skills" class="read_more  py-5 col-12">Read More</a>
         </div>
       </div>
+      <article id="skills_hide" class="main_contents">
+        <h2 class="page_title">Skills</h2>
+        <section class="skills">
+          <div class="container_bg">
+            <div class="skills_item">
+              <div class="skills_item_header">
+                <h3 class="skill_title">Web Design</p>
+              </div>
+              <div class="skills_desc">
+                <div class="skills_icon">
+                  <img class="icon" src="img/html5css3.png">
+                </div>
+                <div class="skills_text">
+                  <h4 class="desc_header">HTML5/CSS3</h4>
+                  <p class="desc_caption">
+                    Bootstrapでレスポンシブサイトのコーディング。正しい文法で、UXが高く、コードがDRYで保守が容易な、SEOにも配慮したサイトをつくるべく日々勉強中です。</p>
+                </div>
+                <div class="skills_icon">
+                  <img class="icon" src="img/wire_frame.png">
+                </div>
+                <div class="skills_text">
+                  <h4 class="desc_header">ワイヤーフレーム</h4>
+                  <p class="desc_caption">XDを使用したワイヤーフレームの作成。</p>
+                </div>
+                <div class="skills_icon">
+                  <img class="icon" src="img/photoshop.png">
+                </div>
+                <div class="skills_text">
+                  <h4 class="desc_header">Photoshop/Illustrator</h4>
+                  <p class="desc_caption">PhotoshopやIllustratorを使用したデザインカンプの作成。
+                    また、バナーやアイコンなど、サイトのパーツも作成します。</p>
+                </div>
+                <div class="skills_icon">
+                  <img class="icon" src="img/javascript.png">
+                </div>
+                <div class="skills_text">
+                  <h4 class="desc_header">JavaScript/jQuery</h4>
+                  <p class="desc_caption">class属性を操作してサイトに動きを付けたり、 プラグインを使ってスライドショーや可変グリッドレイアウトを実装したり。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="skills1">
+          <div class="container_bg1">
+            <div class="skills_item1">
+              <div class="skills_item_header">
+                <h3 class="skill_title">SEO</p>
+              </div>
+              <div class="skills_desc">
+                <div class="skills_icon">
+                  <img class="icon" src="img/pen.png">
+                </div>
+                <div class="skills_text">
+                  <h4 class="desc_header">SEO</h4>
+                  <p class="desc_caption">キーワード選定、タグ設定などの内部対策を学びました。</p>
+                </div>
+                <div class="skills_icon">
+                  <img class="icon" src="img/yajirusi.jpg">
+                </div>
+                <div class="skills_text">
+                  <h4 class="desc_header">Web Writing</h4>
+                  <p class="desc_caption">検索エンジンに評価される文章、Web上で読まれるわかりやすい文章を学んでいます。</p>
+                </div>
+                <div class="skills_icon">
+                  <img class="icon" src="img/woedpress.png">
+                </div>
+                <div class="skills_text">
+                  <h4 class="desc_header">WordPress</h4>
+                  <p class="desc_caption">WordPressのインストール、ダッシュボードの操作、テーマやプラグインなど、基本的なことは可能です。今後、PHPも学びたいと思います。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
     </section>
   </main>
   <footer class="text-center text-mutec">
@@ -199,7 +278,7 @@
           <button type="button" class="btn">SEND</button>
         </form>
         <p class="copyright">
-          copyright 202103.com
+          copyright 2021 Takuya Hosokawa
         </p>
       </div>
     </section>
