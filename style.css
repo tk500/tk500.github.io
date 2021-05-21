@@ -305,6 +305,7 @@ li {
   background: url(img/img_reverse/bottom_icon/top_mikan_revers.png);
   background-size: cover;
   height: 50%;
+
 }
 
 .work_desc_out_1 {
@@ -332,7 +333,7 @@ li {
 
 .work_desc {
   padding: 20px;
-  margin: 0;
+  padding-top: 15%;
 }
 
 .img {
@@ -418,6 +419,8 @@ li {
   height: 550px;
  }
 
+
+
  .skills_item_header {
   padding: 50px;
  }
@@ -465,8 +468,9 @@ li {
 .contac {
   position: relative;
 }
+footer {
+  background-color: #ced4da; 
+}
 .copyright {
-  position: absolute;
-  bottom: 0%;
-  padding-left: 45%;
+  margin-bottom: 0%;
 }
